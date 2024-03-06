@@ -1,0 +1,23 @@
+/*
+ * Protocolo HTTP: é o protocolo que permite a comunicação entre 
+ * o Backend e o Frontend (envia e recebe dados)
+ * 
+ * Como funciona: requisição e resposta
+ * ---------------------------------
+ * O Frontend faz REQUEST (requisição) ao Backend: 
+ * cadastrar ou adicionar (post), deletar (delete), obter (get) e atualizar (put); 
+ * -são os mais comuns nas requests.
+ * -são os CRUD: ele é uma aplicação que executa as 4 operações básicas de sistema
+ * 
+ * A aba 'network' na area de desenvolvedor do navegador mostra isso a cada requisição que faz
+ * 
+ * Existe ferramenta de simulação para testar requisições: 
+ * POSTMAN, INSOMNIA.
+ * 
+ * ---------------------------------
+ * O Backend processa a solicitação, executa com o que precisar e envia um 
+ * RESPONSE (resposta) ao Front
+ * 
+ * 
+ * 
+ */
