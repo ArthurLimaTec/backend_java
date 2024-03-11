@@ -1,0 +1,49 @@
+Até agora, estamos utilizando a classe Produto para tudo. O ideal é que haja um objeto que transfira os dados
+para que não precisemos ficar mexendo na Entidade do nosso banco de dados o tempo todo.
+Por isso, precisamos de um Objeto de Transferência de Dados (DTO)
+
+1.Crie as pastas 'View' e 'Shared'(este vai trafegar entre o Controller e Service, não mais o model)
+
+Dentro de Shared, crie o 'ProdutoDTO.java'
+E basicamente será uma cópia da classe Produto
+
+Agora o ProdutoDTO será usado nas conversões entre Controller e Service
+---------------------------------------------------------------------------------------------------------------------
+
+2.Vamos mover a pasta Controller para dentro da pasta View
+
+Dentro de View, criaremos as pastas Handlers e Model
+---------------------------------------------------------------------------------------------------------------------
+ 3.Criando ProdutoRequest e ProdutoResponse:
+
+ ProdutoRequest é a classe que vai representar o tipo de dado que espero receber
+ quando alguém fizer uma requisição para o backend
+
+ Portanto, copiamos novamente tudo o que está na classe Produto
+ e ajustamos com apenas o que esperamos receber 
+
+ ProdutoResponse é a classe que vai representar o que queremos que o backend devolva
+ como resposta à requisição feita pelo servidor
+
+---------------------------------------------------------------------------------------------------------------------
+4.Reconfigurar o ProdutoService, para comunicar com o ProdutoDTO
+em vez da classe Produto
+(vide ProdutoService atual)
+(Necessário a dependencia:
+<dependency>            
+        	<groupId>org.modelmapper</groupId>            
+        	<artifactId>modelmapper</artifactId>             
+        	<version>3.2.0</version>        
+   		</dependency>)
+
+Depois de atualizar todo o ProdutoService, precisamos atualizar o ProdutoController
+
+Importante: Não se esqueça, as requisições primeiro precisam ser salvas no BD antes de serem retornadas!!!
+---------------------------------------------------------------------------------------------------------------------
+
+5.Reconfigurar o ProdutoController:
+
+De acordo com o novo ProdutoDTO
+
+---------------------------------------------------------------------------------------------------------------------
+

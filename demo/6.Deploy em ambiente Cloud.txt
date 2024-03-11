@@ -1,0 +1,4 @@
+Como colocamos esse projeto em Cloud para produção de fato?
+
+Heroku - versão free permite criar aplicações lá dentro (é um ambiente de testes)
+
